@@ -66,7 +66,7 @@ export class AddquestionComponent implements OnInit {
           {
             if(res.status==200)
             {
-              
+              this.message="Question is posted successfully";
             }
           })
       }
