@@ -1,0 +1,57 @@
+#facebook
+{
+    background-color:#4267B2;
+    
+}
+#google
+{
+    background-color: #DB4437;
+}
+#gle:hover
+{
+    background-color: lightslategrey;
+}
+#gle
+{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+#signin:hover
+{
+    background-color: lightslategray;
+    font-family: 'Times New Roman', Times, serif;
+}
+#fb:hover
+{
+    background-color:lightslategray;
+}
+#fb
+{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+label
+{
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+#login
+{
+    background-color: black;
+    color: white;
+}
+#login:hover
+{
+    background-color: lightslategrey;
+    font-family: 'Times New Roman', Times, serif;
+}
+#loginbtn
+{
+    color: white;
+}
+#loginbtn:hover
+{
+    background-color: lightslategrey;
+}

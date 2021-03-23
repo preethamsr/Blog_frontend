@@ -1,0 +1,50 @@
+.post_div
+{
+    background-color: whitesmoke;
+    width: 100%;  
+}
+.cmt:focus{
+    border-style: none;
+    border-color:none;
+    outline: none !important;
+    box-shadow: none;
+}
+.comment_box:focus{
+    box-shadow: none !important;
+    outline: none !important;
+    border-style: none;
+    border-color: none;
+    outline-width: 0;
+}
+h5
+{
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+.ads
+{
+    background-color: whitesmoke;
+    overflow: auto;
+    width: 300px;
+    height: 300px;
+}
+.main_post_div
+{
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+.suggestion
+{
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+}
+.categories
+{
+    background-color: whitesmoke;
+    text-overflow: ellipsis;
+}

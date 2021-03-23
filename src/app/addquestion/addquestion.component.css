@@ -1,0 +1,39 @@
+#postbody
+{
+    padding:0%;
+    height: 400px;
+    resize: none;
+
+}
+input:focus
+{
+    outline: none;
+    border: none important;
+    box-shadow: none;  
+}
+textarea:focus
+{
+    box-shadow: none;
+}
+#postbutton
+{
+    background-color: black;
+    color:white;
+    width: 120px;
+}
+#postbutton:focus
+{
+    color:green;
+}
+#choosefile
+{
+    border: none;
+}
+.btn
+{
+    box-shadow: none;
+}
+.card
+{
+    font-family: 'Times New Roman', Times, serif;
+}

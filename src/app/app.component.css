@@ -1,8 +1,35 @@
-.navbar
-{
-    width: 100%;
-}
 .navbar-brand
 {
-    color:darkcyan;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.navbar-nav .navbar
+{
+    margin: 0 auto;
+}
+
+.nav-item
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+#signup
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+button
+{
+    color: black;
+}
+.nav-link
+{
+    color:green;
+    font-family: 'Times New Roman', Times, serif;
+    background: transparent;
+    font-size: 20px;
+}
+img
+{
+    width: 20%;
+    height: 20%;
 }

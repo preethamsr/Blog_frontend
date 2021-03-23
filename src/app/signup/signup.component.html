@@ -1,0 +1,132 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <form [formGroup]='user_registration'>
+                <div class="panel-heading">
+                    <h2>Sign up</h2>
+                </div>
+                <div>
+                    <label for="first_name">Name</label>
+                    <input type="text" class="form-control" id="first_name" [(ngModel)]="sign.Firstname"
+                        formControlName="name">
+                    <span *ngIf="name.invalid" class="invalid-feedback">Name Required</span>
+                </div>
+                <div>
+                    <label for="last_name">LastName</label>
+
+                    <input type="text" id="last_name" class="form-control" [(ngModel)]="sign.Lastname"
+                        formControlName="lastname">
+                    <span *ngIf='lastname.invalid' class="invalid-feedback">Required</span>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+
+                    <input type="email" id="email" class="form-control" [(ngModel)]="sign.Email"
+                        formControlName="email">
+                    <span *ngIf='email.invalid' style="color:#D8000C;">Invalid Email</span>
+                    <span style="color:#D8000C;">{{Email_exists}}</span>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+
+                    <input type="password" id="password" class="form-control " [(ngModel)]="sign.password"
+                        formControlName="password_userregistration">
+                    <span *ngIf="password_user_registration.errors?.pattern" style="color:#D8000C;">Password should
+                        contain one uppercase lowercase special character and numbe</span>
+                    <span style="color: #4BB543;">{{Email_successfully_sent_message}}</span>
+                </div>
+                <div>
+                    <button type="button" id="signin" class="btn btn-dark col-12" style="margin-top: 10px;"
+                        [disabled]="user_registration.invalid" (click)="signin()">signup</button>
+                </div>
+                <div style="margin-top: 10px;" id="facebook">
+                    <button type="button" class="col-12 btn" id="fb" (click)="fblogin()">Continue with Facebook</button>
+                </div>
+                <div style="margin-top: 10px;" id="google">
+                    <button type="button" class="col-12 btn" id="gle" (click)="Google_signin()">Continue with
+                        Google</button>
+                </div>
+            </form>
+            <div>
+                <p>{{this.error}}</p>
+            </div>
+        </div>
+        <div class="col-6">
+            <form [formGroup]="login">
+                <div>
+                    <h2>Login</h2>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" [(ngModel)]="user_login.Email"
+                        formControlName="login_email">
+                    <span *ngIf="lgemail.invalid" style="color: #D8000C;">Invalid required</span>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" [(ngModel)]="user_login.password"
+                        formControlName="passowrd_login">
+                    <span style="color: #D8000C;">{{Login_error_message}}</span>
+
+                </div>
+                <div id="login" style="margin-top: 10px;">
+                    <button type="button" class="btn col-12" id="loginbtn" [disabled]="login.invalid"
+                        (click)="Login()">Login</button>
+                </div>
+            </form>
+            <form [formGroup]="forgotpassword">
+                <div style="margin-top: 10px;">
+                    <button type="button" class="btn" (click)="forgotpassworddivhidefun()">Forgot password</button>
+                </div>
+                <div class="col-12" *ngIf="forgotpassworddivhide">
+                    <label for="forgotpasswordemail">Email</label>
+                    <input type="text" class="form-control" id="forgotpasswordemail" [(ngModel)]="forgotpass.email" formControlName="frgtpassword">
+                    <span style="color: #D8000C;" *ngIf="forgpassword.invalid">Email required</span>
+                    <span style="color: #D8000C;">{{otpverificationerror}}</span><br>
+                    <button type="button" class="btn" style="margin-top: 10px;" data-toggle="modal" data-target="#myModal" [disabled]="forgotpassword.invalid"  (click)="forgotpassowrdemailsubmitting()">Submit</button>
+                </div>
+            </form>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                
+                                <h4 class="modal-title" style="font-family: 'Times New Roman', Times, serif;">User Blog</h4>
+                            </div>
+                            <div class="modal-body">
+                                <label for="otp">Enter OTP</label>
+                                <input type="text" class="form-control" [(ngModel)]="Enter_otp" formControlName="OTP">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"  (click)="otpverification()">Enter</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            
+            <div class="modal fade" id="new_password" role="dialog">
+             <div class="modal-header">
+                <h4 class="modal-title" style="font-family: 'Times New Roman', Times, serif;">User Blog</h4>
+             </div>
+             <div class="modal-body">
+             <label for="newpassword">Password</label>
+             <input type="text" id="newpassword" class="form-control">
+             <label for="confirmpassword">Confirm Password</label>
+             <input type="text" id="confirmpassword" class="form-control">
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default">Enter</button>
+             </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</div>

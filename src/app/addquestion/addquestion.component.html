@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="postquestion">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Add Question</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="col-12">
+                            <h6>Title</h6>
+                            <input type="text" class="form-control" formControlName="title" [(ngModel)]="files.title">
+                            <span *ngIf="post_title.hasError('minlength')"> Min 10 characters</span>
+                            <span *ngIf="post_title.hasError('maxlength')">Max 50 Characters</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="col-12">
+                                <h6>Body</h6>
+                                <textarea id="postbody" class="form-control" formControlName="body" [(ngModel)]="files.body"></textarea>
+                                <span *ngIf="post_body.hasError('minlength')" >Min 100 Characters</span>
+                            </div>
+                            <div class="col-12" style="margin-top: 10px;">
+                                <button class="btn" id="choosefile">
+                                    <input type="file" id="choosefile" class="form-control" (change)="onselectedfile($event)">
+                                </button>
+                            </div>
+                            <div>
+                                <p>{{errormessage}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="button" [disabled]="postquestion.invalid" class="btn" id="postbutton" (click)="postquestionmethod()">Add Question</button>
+                        </div>
+                         <div>
+                             {{message}}
+                         </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
